@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>HTML5 Canvas Scrollable Background Effect: Stripe</title>
+        <style type="text/css" media="screen">
+            html, body {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+            }
+            .fork {
+                position:fixed;
+                padding:5px 45px;
+                width:128px;
+                bottom:0px;
+                left:-50px;
+                -webkit-transform:rotate(45deg);
+                -moz-transform:rotate(45deg);
+                -ms-transform:rotate(45deg);
+                transform:rotate(45deg);
+                box-shadow:0 0 0 3px #aaaaaa, 0 0 20px -3px rgba(0, 0, 0, 0.5);
+                text-shadow:0 0 0 #ffffff, 0 0 5px rgba(0, 0, 0, 0.3);
+                background-color:#aaaaaa;
+                color:#ffffff;
+                font-size:13px;
+                font-family:sans-serif;
+                text-decoration:none;
+                font-weight:bold;
+                border:2px dotted #ffffff;
+                -webkit-backface-visibility:hidden;
+                letter-spacing:.5px;
+            }
+            .buy-me {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .coffee {
+                position:absolute;
+                bottom: 12px;
+            }
+        </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170132767-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-170132767-1');
+        </script>
+        <script src="./bundle.js?6"></script>
+    </head>
+    <body>
+        <canvas id="stage"></canvas>
+        <a href='https://github.com/ArtBIT/html5-stripe' class="fork">Fork me on GitHub</a>
+
+        <div class="buy-me">
+        <a href="https://www.buymeacoffee.com/artbit" class="coffee">
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/default-green.png"
+            height="30"
+            alt="Buy Me A Coffee"
+          />
+        </a>
+        </div>
+        <script charset="utf-8">
+            const stage = document.getElementById('stage');
+            stage.width = window.innerWidth;
+            stage.height = window.innerHeight;
+            const app = new App('#stage'); 
+            app.start();
+        </script>
+    </body>
+</html>
