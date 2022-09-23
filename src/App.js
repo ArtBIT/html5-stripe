@@ -2,7 +2,7 @@ import Stripe from "./Stripe";
 import Swipe from "./Swipe";
 
 export default class App {
-  constructor(selector) {
+  constructor(selector, options) {
     this.canvas = document.querySelector(selector);
     this.swiper = new Swipe(this.canvas);
     this.stripe = new Stripe({
@@ -16,6 +16,7 @@ export default class App {
       tintAmount: 0.3,
       background: "random",
       stiffness: 0.05,
+      ...(options || {}),
     });
 
     this.isRunning = false;
