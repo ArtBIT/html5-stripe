@@ -27,9 +27,9 @@ export default class App {
     this.stripe.scroll(amount - 0.02);
   }
   bindEvents() {
-    const onSwipe = (amount) => this.scroll(amount);
-    this.swiper.addEventListener("swipeUp", onSwipe);
-    this.swiper.addEventListener("swipeDown", onSwipe);
+    this.swiper.addEventListener("pointermove", ({ data: { dx, dy } }) =>
+      this.scroll(dy / -100)
+    );
 
     const onWheel = (event) => {
       const wheel = event.deltaY * -0.05;
@@ -48,7 +48,6 @@ export default class App {
     if (!this.isRunning) {
       return;
     }
-    console.log("tick");
     this.stripe.update();
     requestAnimationFrame(() => this.update());
   }
