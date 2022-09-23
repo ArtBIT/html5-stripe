@@ -50,7 +50,7 @@
             gtag('js', new Date());
             gtag('config', 'UA-170132767-1');
         </script>
-        <script src="./bundle.js?7"></script>
+        <script src="./bundle.js?8"></script>
     </head>
     <body>
         <canvas id="stage"></canvas>
@@ -69,7 +69,7 @@
             const stage = document.getElementById('stage');
             stage.width = window.innerWidth;
             stage.height = window.innerHeight;
-            const app = new App('#stage'); 
+            const app = new App('#stage', {stripeWidth: stage.width < 800 ? 30: 80, stripePadding: stage.width < 800 ? 70 : 130}); 
             app.start();
         </script>
     </body>
