@@ -1,0 +1,27 @@
+{
+  "name": "html5-stripe",
+  "version": "0.1.0",
+  "description": "HTML5 Canvas Scrollable Background Stripe Effect",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "npm run build && gh-pages -d public",
+    "dev": "esbuild --bundle src/index.js --outfile=public/bundle.js --sourcemap",
+    "build": "esbuild --bundle src/index.js --outfile=public/bundle.js --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtBIT/html5-stripe.git"
+  },
+  "keywords": ["html5", "canvas", "effect", "background", "javascript"],
+  "author": "Djordje Ungar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArtBIT/html5-stripe/issues"
+  },
+  "homepage": "https://github.com/ArtBIT/html5-stripe#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.5.26",
+    "gh-pages": "^3.1.0"
+  }
+}
